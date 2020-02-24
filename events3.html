@@ -1,0 +1,167 @@
+<html>
+	<head>
+		<title>events</title>
+		<style>
+			#header
+			{
+				height:50px;
+				background-color:blue;
+				text-align:center;
+			}
+			#header ul li{
+				display:inline-block;
+				padding:10px;
+			}
+				li>a{
+					text-decoration:none;
+					color:white;
+					font-weight:bold;
+					font-size:18px;
+					margin-left:10px;
+				
+				}
+				#ind,#chi,#mex{
+				
+				background-color:yellow;
+				height:300px;
+				margin-top:10px;
+				}
+				.box{
+					height:150px;
+					width:150px;
+					background-color:white;
+					line-height:75px;
+					text-align:center;
+					margin:20px;
+					float:left;
+					border-radius:50px;
+					
+				}
+				.images
+				{
+					height:150px;
+					width:150px;
+					border-radius:70px;
+					
+					
+				}
+				.images:hover {
+             -ms-transform: scale(1.0); 
+              -webkit-transform: scale(1.5); 
+               transform: scale(1.5); 
+  }
+				
+		</style>
+		<script>
+				function pageload()
+				{
+					document.getElementById("login").style.display="block";
+					document.getElementById("home").style.display="none";
+				}//fn colses
+				function verify()
+				{
+					var uname,passowrd;
+					uname=document.getElementById("t1").value;
+					password=document.getElementById("t2").value;
+					if(uname=="admin"&&password=="1234")
+					{
+						document.getElementById("login").style.display="none";
+					    document.getElementById("home").style.display="block";
+					}
+					else
+					{
+					   document.getElementById("login").style.display="block";
+					   document.getElementById("home").style.display="none";
+					}
+				}
+				function fetchDish(dishName)
+				{
+					//alert("you selected"+dishName);
+						switch(dishName)
+						{
+							case "indian":
+							document.getElementById("ind").style.display="block";
+							document.getElementById("chi").style.display="none";
+							document.getElementById("mex").style.display="none";
+							break;
+							
+							case "chinese":
+							document.getElementById("ind").style.display="none";
+							document.getElementById("chi").style.display="block";
+							document.getElementById("mex").style.display="none";
+							break;
+							
+							case "mexican":
+							document.getElementById("ind").style.display="none";
+							document.getElementById("chi").style.display="none";
+							document.getElementById("mex").style.display="block";
+							break;
+							
+							default:
+							document.getElementById("ind").style.display="block";
+							document.getElementById("chi").style.display="block";
+							document.getElementById("mex").style.display="block";
+						
+						}//switch colses
+				
+				}//fetchDish over
+		</script>
+	</head>
+	<body onload="pageload()">
+		<div id="login">
+				<table align="center" border="1" bgcolor="skyblue">
+					<tr>
+						<th>Name</th>
+						<td><input type="text" id="t1"></td>
+					</tr>
+					
+					<tr>
+						<th>password</th>
+						<td><input type="password" id="t2"></td>
+					</tr>
+					
+					<tr>
+						
+						<td align="center" colspan="2">
+							<button type="button" onclick="verify()">Login</button>
+						</td>
+					</tr>
+				</table>
+		</div><!---login closes--->
+		<div id="home">
+			<div id="header">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#" onclick="fetchDish(this.text)">indian</a></li>
+							<li><a href="#"onclick="fetchDish(this.text)">chinese</a></li>
+							<li><a href="#"onclick="fetchDish(this.text)">mexican</a></li>
+						</ul>
+				
+			</div>
+			<div id="ind">
+			        <h3 align="center">indian</h3>
+					<div class="box"><img src="dosa.jpg" class="images">dosa</div>
+					<div class="box"><img src="idly.jpg" class="images">idly</div>
+					<div class="box"><img src="vada.jpg" class="images">vada</div>
+					<div class="box"><img src="chapati.jpg" class="images">chapati</div>
+					<div class="box"><img src="puri.jpg" class="images">puri</div>
+			</div>
+			<div id="chi">
+					<h3 align="center">chinese</h3>
+					<div class="box"><img src="c1.jpg" class="images"></div>
+					<div class="box"><img src="c2.jpg" class="images"></div>
+					<div class="box"><img src="c3.jpg" class="images"></div>
+					<div class="box"><img src="c4.jpg" class="images"></div>
+					<div class="box"><img src="c5.jpg" class="images"></div>
+			</div>
+			<div id="mex">
+					<h3 align="center">mexican</h3>
+					<div class="box"><img src="m1.jpg" class="images"></div>
+					<div class="box"><img src="m2.jpg" class="images"></div>
+					<div class="box"><img src="m3.jpg" class="images"></div>
+					<div class="box"><img src="m4.jpg" class="images"></div>
+					<div class="box"><img src="m5.jpg" class="images"></div>
+			</div>
+		</div><!------------home closes------>
+	</body>
+</html>

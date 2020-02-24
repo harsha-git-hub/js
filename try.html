@@ -1,0 +1,38 @@
+<html>
+<head>
+ <script>
+	function verifyAge()
+		{
+			var message,x;
+			message=document.getElementById("msg");
+			message.innerHTML="";
+			
+			x=document.getElementById("t1").value
+			try {
+				if(x=="") throw "invalid input:cannot be blank";
+				if(isNaN(x)) throw "please enter your age in number";
+				x=Number(x);
+				if(x<18) throw "your age is below 18 so no right to vote";
+				if(x>18) throw "your age is above 18 so u have right to vote";
+			
+			}//try colses
+			catch (err){
+				message.innerHTML=err;
+			}
+			finally{
+				document.getElementById("t1").value="";
+			}
+		}
+
+
+   </script>
+ </head>
+ <body>
+	<p>please Enter your age</p>		
+	<br>
+	<input type="text" id="t1">
+	<button type="button" onclick="verifyAge()">Verify</button>
+	<p id="msg"></p>
+ </body>
+
+</html>

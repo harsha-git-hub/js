@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Switch Case Example </title>
+
+        <script>
+        
+            function testswitch()
+            {
+               var car=prompt("Enter your favorite car");
+               switch(car)
+               {
+                   case "BMW":
+                   alert("Your favorite car is: "+car+ "is in the stock");
+                   break;
+
+                   case "Audi":
+                   alert("Your favorite car is: "+car+ "is in the stock");
+                   break;
+
+                   case "Mercendz":
+                   alert("Your favorite car is: "+car+ "is in the stock");
+                   break;
+
+                   case "Toyota":
+                   alert("Your favorite car is: "+car+ "is in the stock");
+                   break;
+
+                   default:
+                   alert("opps! your favorite car :"+car+"is not in the stock");
+               }
+            }
+
+            function testwhile()
+            {
+                var i=0;
+                while(i<10);
+                {
+                    document.write("The value of i is :"+i+"<br>");
+                    i++;
+                }
+
+            }            
+            </script>
+    
+    
+    </head>
+
+    <body>
+        <button onclick="testswitch()">Test Switch</button>
+        <button onclick="testwhile()">Test While</button>
+
+    </body>
+</html>

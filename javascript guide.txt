@@ -1,0 +1,20 @@
+prompt is used to take input from user it comes with two buttons ---->> OK, CANCEL
+alert is popup box which display the output on popupwindow comes with ONE button-----> OK
+It is basically used to display a message or output on popup window------>>Alert 
+
+document.getelementbyid,name,tagname ----->>>>>statements are document methods
+parseint is type conversion from string to integer
+
+confirm is the popup box which will confirm the action of the user which has two buttons------>>> OK,CANCEL ----continue line 
+where OK holds boolean value true, where CANCEL holds boolean value false;
+
++symbol in strings combined data , where as in integers it added 
+
+--------------------------------------------------------------------------------------
+Functions : 
+
+
+
+
+---------------------------------------------------------------------------------------
+Prompt,alert,confirm are window objects

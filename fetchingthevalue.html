@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Fetching The value</title>
+
+        <script>
+            function calculate()
+            {
+                var y=document.getElementsByClassName("box");
+                alert(" The no of textboxes: "+y.length);
+                var sum=0;
+
+                for(var i=0;i<y.length;i++)
+                {   var x=y[i].value;
+                    sum=sum+parseInt(x);
+                }
+
+                document.getElementById("bill").value=sum;
+                
+
+            }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>
+    </head>
+
+
+    <body>
+        <table align="center" border="1">
+            <tr>
+                <th>Potatoes</th>
+                <td><input type="text" class="box"></td>
+            </tr>
+
+            <tr>
+                <th>Onion</th>
+                <td><input type="text" class="box"></td>
+            </tr>
+
+            <tr>
+                <th>Tomato</th>
+                <td><input type="text" class="box"></td>
+            </tr>
+
+            <tr>
+                    <th>Total Bill</th>
+                    <td><input type="text" id="bill" readonly></td>
+            </tr>
+
+            <tr>
+                
+                <td colspan="2" align="center">
+                    <button type="button" onclick="calculate()">Total Price</button>
+
+                </td>
+            </tr>
+
+        </table>
+    
+
+
+
+
+
+
+
+
+    </body>
+</html>

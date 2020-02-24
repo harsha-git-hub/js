@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>traffic lights</title>
+		<style>
+			#light
+			{
+				text-align:center;
+				height:100px;
+				width:120px;
+				padding-top:20px;
+				margin:auto;
+				background-color:gray;
+				border-radius:100px;
+			}#light1
+			{
+				text-align:center;
+				height:100px;
+				width:120px;
+				padding-top:20px;
+				margin:auto;
+				background-color:gray;
+				border-radius:100px;
+			}#light2
+			{
+				text-align:center;
+				height:100px;
+				width:120px;
+				padding-top:20px;
+				margin:auto;
+				background-color:gray;
+				border-radius:100px;
+			}
+			#pole
+			{
+				height:100px;
+				width:20px;
+				text-align:center;
+				background-color:gray;
+				margin:auto;
+				   
+			}
+			#box
+			{
+				height:370px;
+				width:250px;
+				text-align:center;
+				background-color:black;
+				margin:auto;
+			}
+			
+		</style>
+		<script>
+			function on()
+			{
+				document.getElementById("light").style.backgroundColor="red";
+				document.getElementById("light1").style.backgroundColor="gray";
+				document.getElementById("light2").style.backgroundColor="gray";
+			}
+			function off()
+			{
+				document.getElementById("light").style.backgroundColor="gray";
+				document.getElementById("light1").style.backgroundColor="green";
+				document.getElementById("light2").style.backgroundColor="gray";
+			}
+			function function1()
+			{
+				document.getElementById("light").style.backgroundColor="gray";
+				document.getElementById("light1").style.backgroundColor="gray";
+				document.getElementById("light2").style.backgroundColor="yellow";			}
+		</script>
+	</head>
+	<body align="center">
+			<div id="box">
+		<div id="light"></div>
+		<div id="light1"></div>
+		<div id="light2"></div>
+		</div>
+		<div id="pole"></div>
+		<br>
+		<button onclick="on()">red</button>
+		<button onclick="off()">green</button>
+		<button onclick="function1()">yellow</button>
+		
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>DATE GET METHODS</title>
+
+	
+</head>
+<body>
+	<table align="center" border="1">
+		<tr>
+			<th>Function Name</th>
+			<th>Result</th>
+		</tr>
+		<tr>
+			<th>getFullYear()</th>
+			<td id="one"></td>
+		</tr>
+		<tr>
+			<th>getMonth()</th>
+			<td id="two"></td>
+		</tr>
+		<tr>
+			<th>getHours()</th>
+			<td id="three"></td>
+		</tr>
+		<tr>
+			<th>getMinutes()</th>
+			<td id="four"></td>
+		</tr>
+		<tr>
+			<th>getSeconds()</th>
+			<td id="five"></td>
+		</tr>
+		<tr>
+			<th>getMilliseconds()</th>
+			<td id="six"></td>
+		</tr>
+		<tr>
+			<th>getTime()</th>
+			<td id="seven"></td>
+		</tr>
+		<tr>
+			<th>getDay()</th>
+			<td id="eight"></td>
+		</tr>
+		<tr>
+			<th>Date.now()</th>
+			<td id="nine"></td>
+		</tr>
+		<tr>
+			<th>getDate()</th>
+			<td id="ten"></td>
+		</tr>
+	</table>
+	<script>
+		var d= new Date();
+		document.getElementById("one").innerHTML=d.getFullYear();
+		document.getElementById("two").innerHTML=d.getMonth();
+		document.getElementById("three").innerHTML=d.getHours();
+		document.getElementById("four").innerHTML=d.getMinutes();
+		document.getElementById("five").innerHTML=d.getSeconds();
+		document.getElementById("six").innerHTML=d.getMilliseconds();
+		document.getElementById("seven").innerHTML=d.getTime();
+		document.getElementById("eight").innerHTML=d.getDay();
+		document.getElementById("nine").innerHTML=Date.now();
+		document.getElementById("ten").innerHTML=d.getDate();
+	</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<title>events</title>
+		<script>
+			function testclick()
+				{
+					alert("you clicked once");
+				}
+			function testdblclick()
+			{
+				alert("you clicked me twice");
+			}
+			function testmouseEnter()
+				{
+					document.getElementById("div1").style.backgroundColor="red";
+					document.getElementById("div1").style.color="white";
+					document.getElementById("div1").innerHTML="Mouse Enter";
+				}
+		   function testmouseLeave()
+				{
+					document.getElementById("div1").style.backgroundColor="yellow";
+					document.getElementById("div1").style.color="black";
+					document.getElementById("div1").innerHTML="Mouse Left";
+				}
+			function fetchCity(cityName)
+			{
+				alert("The City selected is "+cityName);
+				
+			}
+			function testkeypress()
+			{
+				alert("the keypress event is genrated as soon as key is pressed and not released")
+			}
+			function testkeyup()
+			{
+				alert("the keypress event is genrated as soon as key is pressed and not released")
+			}
+			function testkeydown()
+			{
+				alert("the keypress event is genrated as soon as key is pressed and not released")
+			}
+			function testfocus()
+			{
+				document.getElementById("t4").style.backgroundColor="green";
+			}
+			function testblur()
+			{
+				document.getElementById("t5").style.backgroundColor="red";
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="testclick()">click me once</button>
+		<button ondblclick="testdblclick()">click me twice</button>
+		<marquee onmouseover="this.stop()" onmouseout="this.start()" >hellow we are learning java script</marquee>
+		<hr>
+		<div id="div1" style="height:100px;width:100px;background-color:yellow;border:2px solid black"
+			onmouseenter="testmouseEnter()" onmouseleave="testmouseLeave()">
+			
+			testing mouse enter
+		</div>
+		<br>
+		<select onchange="fetchCity(this.value)">
+			<option value="choose city">choose city</option>
+			<option value="chennai">chennai</option>
+			<option value="bangalore">bangalore</option>
+			<option value="mumbai">mumbai</option>
+			<option value="dehli">dehli</option>
+		</select>
+		
+		<br>
+		
+		<h3>Keyboard events</h3>
+			
+			onkeypress:<input type="text" id="t1" onkeypress="testkeypress()">
+			onkeyup:<input type="text" id="t2" onkeyup="testkeyup()">
+			onkeydown:<input type="text" id="t3" onkeydown="testkeydown()">
+			
+			<h3>onfocus and onblur</h3>
+			onfocus:<input type="text" id="t4" onfocus="testfocus()">
+			onblur:<input type="text" id="t5" onblur="testblur()">
+	</body>
+</html>

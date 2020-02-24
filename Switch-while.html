@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Switch Case Example </title>
+
+        <script>
+        
+            function testswitch()
+            {
+               var car=prompt("Enter your favorite car");
+               switch(car)
+               {
+                   case "BMW":
+                   alert("Your favorite car is: "+car+ "is in the stock");
+                   break;
+
+                   case "Audi":
+                   alert("Your favorite car is: "+car+ "is in the stock");
+                   break;
+
+                   case "Mercendz":
+                   alert("Your favorite car is: "+car+ "is in the stock");
+                   break;
+
+                   case "Toyota":
+                   alert("Your favorite car is: "+car+ "is in the stock");
+                   break;
+
+                   default:
+                   alert("opps! your favorite car :"+car+"is not in the stock");
+               }
+            }
+
+            function testwhile()
+            {
+                var i=0;
+                while(i<10)
+                {
+                    document.write("The value of i is :"+i+"<br>");
+                    i++;
+                }
+
+
+
+
+            }
+            
+            function testdowhile()
+            {
+                do{
+                    var x=5;
+                    document.write("The value of x is:"+x);
+                    x++;
+                }while(x<5)
+
+
+
+
+
+            }
+
+            function testforLoop()
+            {
+                var y=prompt("Enter the number of rows to make a table ");
+                var data="<table border='1' align='center'>";
+                for(var i=1;i<=y;i++)
+                {
+                   
+                    data=data+"<tr>";
+                        data=data+"<td>"+ i + "row" +"</td>";
+                        data=data+"</tr>";
+                }
+                data=data+"</table>";
+                document.getElementById("result").innerHTML=data;
+
+
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            </script>
+    
+    
+    </head>
+
+    <body>
+        <button onclick="testswitch()">Test Switch</button>
+        <button onclick="testwhile()">Test While</button>
+        <button onclick="testdowhile()">Test dowhile</button>
+        <button onclick="testforLoop()">Test forloop</button>
+        <div id="result">
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

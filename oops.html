@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>classes in js</title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+		<script>
+			class Car {
+				
+				constructor(brand)
+				{
+					this.carName=brand;
+				}
+				
+				getMyCar()
+				{
+					return "I have "+this.carName;
+				}
+				
+				static myfavouriteCar(x)
+				{
+					return "I am called through static:"+x.carName;
+				}
+			}//class closes
+			
+			mycar=new Car("mercedz");
+			document.getElementById("demo").innerHTML=mycar.carName;
+			document.getElementById("demo1").innerHTML=mycar.getMyCar();
+			document.getElementById("demo2").innerHTML=Car.myfavouriteCar(mycar);
+		</script>
+	</body>
+</html>

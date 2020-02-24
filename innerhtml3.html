@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title> inner html</title>
+	</head>
+	<body>
+		<p>this is para1</p>
+		<p>this is para2</p>
+		<p>this is para3</p>
+		<p>this is para4</p>
+		<p>this is para5</p>
+		<div id="result">
+		</div>
+		
+		<script>
+			var y=document.getElementsByTagName("p");
+			document.write("the no of para is : "+y.length);
+			
+			document.getElementById("result").innerHTML="the contect  inside para2 is"+y[1].innerHTML;
+		</script>
+		
+	</body>
+
+</html>

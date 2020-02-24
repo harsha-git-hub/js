@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<table align="center" border="1">
+		<tr>
+			<th>setFullYear()</th>
+			<td id="one"></td>
+		</tr>
+		<tr>
+			<th>setFullYear()</th>
+			<td id="one1"></td>
+		</tr>	
+		<tr>
+			<th>setHours()</th>
+			<td id="two"></td>
+		</tr>
+		<tr>
+			<th>setMilliseconds()</th>
+			<td id="three"></td>
+		</tr>
+		<tr>
+			<th>setMinutes()</th>
+			<td id="four"></td>
+		</tr>
+		<tr>
+			<th>setSeconds()</th>
+			<td id="five"></td>
+		</tr>
+		<tr>
+			<th>setMonth()</th>
+			<td id="six"></td>
+		</tr>
+		<tr>
+			<th>setDate()</th>
+			<td id="seven"></td>
+		</tr>
+	</table>
+
+	<script>
+		var d= new Date();
+		d.setFullYear(2020);
+		document.getElementById("one").innerHTML=d;
+
+		d.setFullYear(2020,11,13)
+		document.getElementById("one1").innerHTML=d;
+
+		var d1= new Date();
+		d1.setHours(20);
+		document.getElementById("two").innerHTML=d1;
+
+		d1.setMilliseconds(122);
+		document.getElementById("three").innerHTML=d1;
+
+		d1.setMinutes(20);
+		document.getElementById("four").innerHTML=d1;
+
+		d1.setSeconds(30);
+		document.getElementById("five").innerHTML=d1;
+
+		d1.setMonth(10);
+		document.getElementById("six").innerHTML=d1;
+
+		d1.setDate(15);
+		document.getElementById("seven").innerHTML=d1;
+	</script>
+
+	</body>
+</html>

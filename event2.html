@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>events implementation </title>
+		<style>
+			.iconimg{
+				height:100px;
+				width:100px;
+				float:left;
+				margin-left:25px;
+			} 
+			#div2
+			{
+				margin:auto;
+				height:200px;
+			}
+			button{
+				height:50px;
+				width:50px;
+				border:2px solid black;
+				background-color:pink;
+				float:left;
+				margin:15px;
+				color:blue;
+			}
+			#clear
+			{
+				clear:both;
+			}
+		</style>
+		<script>
+			function changeimg(Image)
+			{
+				document.getElementById("image1").src=Image;
+			}
+		</script>
+	</head>
+  <body>
+	<img src="1.jpg" height="300px" width="600px" id="image1">
+	<br><hr>
+	
+	<button onclick="changeimg('1.jpg')">1</button>
+	<button onclick="changeimg('3.jpg')">3</button>
+	<button onclick="changeimg('2.jpg')">2</button>
+	<button onclick="changeimg('3.jpg')">3</button>
+	<button onclick="changeimg('1.jpg')">1</button>
+	<div id="clear"></div>
+	<br>
+	
+	
+	<div id="div2">
+	<img src="1.jpg" onmousemove="changeimg('1.jpg')" class="iconimg">
+	<img src="3.jpg" onmousemove="changeimg('3.jpg')" class="iconimg">
+	<img src="2.jpg" onmousemove="changeimg('2.jpg')" class="iconimg">
+	<img src="3.jpg" onmousemove="changeimg('3.jpg')" class="iconimg">
+	<img src="1.jpg" onmousemove="changeimg('1.jpg')" class="iconimg">
+	</div>
+ </body>
+</html>

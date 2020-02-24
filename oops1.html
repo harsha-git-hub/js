@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>clases in js</title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<script>
+			class Student{
+				constructor(fname)
+				{
+					this.firstName=fname;
+				}
+				getMyfirstName()
+				{
+					return "my first name is "+ this.firstName;
+				}
+			}//clases closes
+			
+			class Marks extends Student
+			{
+				constructor(fname,lname)
+			{
+				super(fname)
+				this.lastName=lname;
+			}
+			
+			snowMyCompleteName()
+			{
+				return this.getMyfirstName()+"  "+this.lastName;
+			}
+			}//class closes
+			
+			stud1= new Marks("sidd","Joshi");
+			document.getElementById("demo").innerHTML=stud1.snowMyCompleteName();
+		</script>
+	</body>
+</html>

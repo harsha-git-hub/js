@@ -1,0 +1,259 @@
+<html>
+	<head>
+		<title>validation</title>
+		<script>
+			function validate()
+			{
+			//===========================================
+					//fetch the value of the respective textboxes
+					//and store them in to respective variables
+					
+					var name=document.getElementById("fname").value;
+					var email=document.getElementById("email").value;
+					var mobile=document.getElementById("mobile").value;
+					var pass=document.getElementById("pass").value;
+					var conpass=document.getElementById("cpass").value;
+					var city=document.getElementById("city").value;
+					var address=document.getElementById("address").value;
+					var male=document.getElementById("male").checked;
+					var female=document.getElementById("female").checked;
+					var chk=document.getElementById("chk1").checked;
+					
+			//take boolean variables to check if all the form is filled with
+			//data,set its value to true at the beginning
+			
+					var status=true;
+				//trim the left and right spaces if given by user while entering his details
+				//usually while entering in the textbox
+					name=name.trim();
+					email=email.trim();
+					mobile=mobile.trim();
+					pass=pass.trim();
+					conpass=conpass.trim();
+					address=address.trim();
+					
+		 //check if any of above variables is blank,if blank then make the respective textbox color to red 
+		//and also set the status variable to flase along with it give appropriate error message
+				//------for name variable----------------------
+				if(name=="")
+				{
+					document.getElementById("fname").style.borderColor="red";
+					document.getElementById("fnameerr").innerHTML="invalid Name";
+					document.getElementById("fnameerr").style.color="red";
+					status=false;
+				}
+				else
+				{
+				  document.getElementById("fname").style.borderColor="";
+				  document.getElementById("fnameerr").innerHTML="";
+				}
+				//------for email variable----------------------
+				if(email=="")
+				{
+					document.getElementById("email").style.borderColor="red";
+					document.getElementById("emailerr").innerHTML="invalid Name";
+					document.getElementById("emailerr").style.color="red";
+					
+					status=false;
+				}
+				else
+				{
+				  document.getElementById("email").style.borderColor="";
+				  document.getElementById("emailerr").innerHTML="";
+				}
+				//------for mobile variable----------------------
+				if(mobile==""||mobile.length<10||mobile.length>10||isNaN(mobile))
+				{
+					document.getElementById("mobile").style.borderColor="red";
+					document.getElementById("mobileerr").innerHTML="invalid Mobile";
+					document.getElementById("mobileerr").style.color="red";
+					status=false;
+				}
+				else
+				{
+				  document.getElementById("mobile").style.borderColor="";
+				  document.getElementById("mobileerr").innerHTML="";
+				}
+				if(pass!==conpass)
+				{
+						document.getElementById("pass").style.borderColor="red";
+						document.getElementById("cpass").style.borderColor="red";
+						document.getElementById("matchpasserr").innerHTML="Password and confirm does not mtach";
+						document.getElementById("matchpasserr").style.color="red";
+						status=false;
+						
+				}
+				else
+				{
+					document.getElementById("pass").style.borderColor="";
+					document.getElementById("cpass").style.borderColor="";
+					document.getElementById("matcherr").innerHTML=""
+				}
+				//------for password variable----------------------
+				if(pass=="")
+				{
+					document.getElementById("pass").style.borderColor="red";
+					document.getElementById("passworderr").innerHTML="invalid Password";
+					document.getElementById("passworderr").style.color="red";
+					status=false;
+				}
+				else
+				{
+				  document.getElementById("pass").style.borderColor="";
+				  document.getElementById("passworderr").innerHTML="";
+				} 
+				//-----------for conpass varibles-----------
+			  if(conpass=="")
+				{
+					document.getElementById("cpass").style.borderColor="red";
+					document.getElementById("matcherr").innerHTML="invalid password";
+					document.getElementById("matcherr").style.color="red";
+					status=false;
+				}
+				else
+				{
+				  document.getElementById("cpass").style.borderColor="";
+				  document.getElementById("matcherr").innerHTML="";
+				}
+				
+				//-----------for city varibles-----------
+			  if(city=="")
+				{
+					document.getElementById("city").style.borderColor="red";
+					document.getElementById("cityerr").innerHTML="invalid city";
+					document.getElementById("cityerr").style.color="red";
+					status=false;
+				}
+				else
+				{
+				  document.getElementById("city").style.borderColor="";
+				  document.getElementById("cityerr").innerHTML="";
+				}
+				
+				
+				
+				//------for address variable----------------------
+				if(address=="")
+				{
+					document.getElementById("address").style.borderColor="red";
+					document.getElementById("addresserr").innerHTML="invalid Address";
+					document.getElementById("addresserr").style.color="red";
+					status=false;
+				}
+				else
+				{
+				  document.getElementById("email").style.borderColor="";
+				  document.getElementById("addresserr").innerHTML="";
+				}
+				
+					//for radio button
+				if (male==true||female==true)
+				{
+					document.getElementById("gendererr").innerHTML="";
+				}
+				else{
+					document.getElementById("gendererr").innerHTML="please select the gender";
+					document.getElementById("gendererr").style.color="red";
+					status=false;
+				}
+
+				// for checkbox
+				if(chk==true)
+				{
+					document.getElementById("termserr").innerHTML="";
+				}
+				else{
+					document.getElementById("termserr").innerHTML="please agree to terms and conditions";
+					document.getElementById("termserr").style.color="red";
+					status=false;
+				}
+
+
+                
+
+			//================================================
+			}//validate() closes
+		</script>
+	</head>
+	<body>
+		<table align="center" bgcolor="skyblue">
+			<tr>
+				<th>Name</th>
+				<td><input type="text" id="fname" placeholder="Enter your name">
+					<span id="fnameerr"></span>
+				</td>
+			</tr>
+			
+			<tr>
+				<th>Email</th>
+				<td><input type="text" id="email" placeholder="Enter your email">
+					<span id="emailerr"></span>
+				</td>
+			</tr>
+			
+			<tr>
+				<th>mobile</th>
+				<td><input type="text" id="mobile" placeholder="Enter your mobile no">
+					<span id="mobileerr"></span>
+				</td>
+			</tr>
+			
+			<tr>
+				<th>password</th>
+				<td><input type="password" id="pass" placeholder="Enter your password">
+					<span id="passworderr"></span>
+				</td>
+			</tr>	
+			
+			<tr>
+				<th>Confirm password</th>
+				<td><input type="password" id="cpass" placeholder="Enter your password again">
+						<span id="confirmerr"></span>
+						<span id="matcherr"></span>
+				</td>
+			</tr>
+			
+			<tr>
+				<th> city</th>
+				<td>
+					<select id="city">
+						<option value="">choose city</option>
+						<option value="bangalore">bangalore</option>
+						<option value="chennai">chennai</option>
+						<option value="mumbai">mumbai</option>
+					</select>
+					<span id="cityerr"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Address</th>
+				<td><textarea id="address"></textarea>
+				<span id="addresserr"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>gender</th>
+				<td>
+					<input type="radio" id="male" value="F">Male
+					<input type="radio" id="female" value="F">Female
+					<span id="gendererr"></span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="centre">
+					<input type="checkbox" id="chk1" value="agree">i agree to terms and conditions
+					<span id="termserr"></span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="center">
+					<button type="button" onclick="validate()">save</button>
+					<button type="reset" onclick="cleardata()">clear</button>
+				</td>
+			</tr>
+			
+		</table>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>
+		popup boxes
+		</title>
+		
+	</head>
+	<body>
+	<script>
+		//promt is used to take input from user,it comes two buttons ok, cannel
+			var a=prompt ("enter a 1st number");
+			var b=prompt ("enter a 2nd number");
+			
+			var sum=parseInt(a)+parseInt(b);//parseInt is the type conversionfrom string to integer
+			//alert is the popup box which display the output on popupwindow,it has one button
+			//pk. it is basically used to dispaly the meesage or output on the popup window
+			
+			alert(" the sum is:"+ sum);
+			
+			//confirm is the popup box which the action of the user , it has
+			
+			var sts=confirm(" do u want to continue with the game ");
+			if(sts==true){
+						alert("you clicked  on ok  so value is:"+sts+" lets begin with our game");
+						var x=prompt("enter  first number to multiply");
+						var y=prompt("enter  second number to multiply");
+						var mul=x*y;
+						alert("the multipication of x and y is:"+mul);
+			}
+			else{
+					alert("you clicked on cancel so value is:"+sts+"thanks you see you later");
+			}
+	</script>
+		
+	</body>
+</html>
